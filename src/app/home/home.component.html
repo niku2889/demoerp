@@ -1,0 +1,1513 @@
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-dark">
+    <div class="navbar-brand wmin-200">
+        <a href="index.html" class="d-inline-block">
+            <img src="../assets/global_assets/images/logo_light.png" alt="">
+        </a>
+    </div>
+
+    <div class="d-md-none">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+            <i class="icon-tree5"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+            <i class="icon-paragraph-justify3"></i>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+        </ul>
+
+        <span class="badge bg-success-400 ml-md-auto mr-md-3">Active</span>
+
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a *ngIf="selectedLang == 'en'" href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img src="../assets/global_assets/images/lang/gb.png" class="img-flag mr-2" alt="">
+                    English
+                </a>
+                <a *ngIf="selectedLang == 'fr'" href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img src="../assets/global_assets/images/lang/fr.png" class="img-flag mr-2" alt="">
+                    français
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a (click)="changeLanguage('en')" class="dropdown-item english "
+                        [class.active]="selectedLang == 'en'"><img src="../assets/global_assets/images/lang/gb.png"
+                            class="img-flag" alt=""> English</a>
+                    <a (click)="changeLanguage('fr')" class="dropdown-item ukrainian"
+                        [class.active]="selectedLang == 'fr'"><img src="../assets/global_assets/images/lang/fr.png"
+                            class="img-flag" alt=""> français</a>
+                    <!-- <a href="#" class="dropdown-item deutsch"><img src="../assets/global_assets/images/lang/de.png"
+                            class="img-flag" alt=""> Deutsch</a>
+                    <a href="#" class="dropdown-item espana"><img src="../assets/global_assets/images/lang/es.png"
+                            class="img-flag" alt=""> España</a>
+                    <a href="#" class="dropdown-item russian"><img src="../assets/global_assets/images/lang/ru.png"
+                            class="img-flag" alt=""> Русский</a> -->
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+                    <i class="icon-bubbles5"></i>
+                    <span class="d-md-none ml-2">Messages</span>
+                    <span class="badge badge-pill badge-mark bg-orange-400 border-orange-400 ml-auto ml-md-0"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+                    <div class="dropdown-content-header">
+                        <span class="font-weight-semibold">Messages</span>
+                        <a href="#" class="text-default"><i class="icon-compose"></i></a>
+                    </div>
+
+                    <div class="dropdown-content-body dropdown-scrollable">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="mr-3 position-relative">
+                                    <img src="../assets/global_assets/images/placeholders/placeholder.jpg" width="36"
+                                        height="36" class="rounded-circle" alt="">
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <a href="#">
+                                            <span class="font-weight-semibold">James Alexander</span>
+                                            <span class="text-muted float-right font-size-sm">04:58</span>
+                                        </a>
+                                    </div>
+
+                                    <span class="text-muted">who knows, maybe that would be the best thing for
+                                        me...</span>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3 position-relative">
+                                    <img src="../assets/global_assets/images/placeholders/placeholder.jpg" width="36"
+                                        height="36" class="rounded-circle" alt="">
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <a href="#">
+                                            <span class="font-weight-semibold">Margo Baker</span>
+                                            <span class="text-muted float-right font-size-sm">12:16</span>
+                                        </a>
+                                    </div>
+
+                                    <span class="text-muted">That was something he was unable to do because...</span>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <img src="../assets/global_assets/images/placeholders/placeholder.jpg" width="36"
+                                        height="36" class="rounded-circle" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <a href="#">
+                                            <span class="font-weight-semibold">Jeremy Victorino</span>
+                                            <span class="text-muted float-right font-size-sm">22:48</span>
+                                        </a>
+                                    </div>
+
+                                    <span class="text-muted">But that would be extremely strained and
+                                        suspicious...</span>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <img src="../assets/global_assets/images/placeholders/placeholder.jpg" width="36"
+                                        height="36" class="rounded-circle" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <a href="#">
+                                            <span class="font-weight-semibold">Beatrix Diaz</span>
+                                            <span class="text-muted float-right font-size-sm">Tue</span>
+                                        </a>
+                                    </div>
+
+                                    <span class="text-muted">What a strenuous career it is that I've chosen...</span>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <img src="../assets/global_assets/images/placeholders/placeholder.jpg" width="36"
+                                        height="36" class="rounded-circle" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">
+                                        <a href="#">
+                                            <span class="font-weight-semibold">Richard Vango</span>
+                                            <span class="text-muted float-right font-size-sm">Mon</span>
+                                        </a>
+                                    </div>
+
+                                    <span class="text-muted">Other travelling salesmen live a life of luxury...</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-content-footer justify-content-center p-0">
+                        <a href="#" class="bg-light text-grey w-100 py-2" data-popup="tooltip" title="Load more"><i
+                                class="icon-menu7 d-block top-0"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+                    <i class="icon-bell2"></i>
+                    <span class="d-md-none ml-2">Activity</span>
+                    <span class="badge badge-pill badge-mark bg-orange-400 border-orange-400 ml-auto ml-md-0"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-content wmin-md-350">
+                    <div class="dropdown-content-header">
+                        <span class="font-weight-semibold">Latest activity</span>
+                        <a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+                    </div>
+
+                    <div class="dropdown-content-body dropdown-scrollable">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="mr-3">
+                                    <a href="#" class="btn bg-success-400 rounded-round btn-icon"><i
+                                            class="icon-mention"></i></a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="#">Taylor Swift</a> mentioned you in a post "Angular JS. Tips and tricks"
+                                    <div class="font-size-sm text-muted mt-1">4 minutes ago</div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <a href="#" class="btn bg-pink-400 rounded-round btn-icon"><i
+                                            class="icon-paperplane"></i></a>
+                                </div>
+
+                                <div class="media-body">
+                                    Special offers have been sent to subscribed users by <a href="#">Donna Gordon</a>
+                                    <div class="font-size-sm text-muted mt-1">36 minutes ago</div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <a href="#" class="btn bg-blue rounded-round btn-icon"><i
+                                            class="icon-plus3"></i></a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="#">Chris Arney</a> created a new <span
+                                        class="font-weight-semibold">Design</span> branch in
+                                    <span class="font-weight-semibold">Limitless</span> repository
+                                    <div class="font-size-sm text-muted mt-1">2 hours ago</div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <a href="#" class="btn bg-purple-300 rounded-round btn-icon"><i
+                                            class="icon-truck"></i></a>
+                                </div>
+
+                                <div class="media-body">
+                                    Shipping cost to the Netherlands has been reduced, database updated
+                                    <div class="font-size-sm text-muted mt-1">Feb 8, 11:30</div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <a href="#" class="btn bg-warning-400 rounded-round btn-icon"><i
+                                            class="icon-comment"></i></a>
+                                </div>
+
+                                <div class="media-body">
+                                    New review received on <a href="#">Server side integration</a> services
+                                    <div class="font-size-sm text-muted mt-1">Feb 2, 10:20</div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="mr-3">
+                                    <a href="#" class="btn bg-teal-400 rounded-round btn-icon"><i
+                                            class="icon-spinner11"></i></a>
+                                </div>
+
+                                <div class="media-body">
+                                    <strong>January, 2018</strong> - 1320 new users, 3284 orders, $49,390 revenue
+                                    <div class="font-size-sm text-muted mt-1">Feb 1, 05:46</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-content-footer bg-light">
+                        <a href="#" class="text-grey mr-auto">All activity</a>
+                        <div>
+                            <a href="#" class="text-grey" data-popup="tooltip" title="Clear list"><i
+                                    class="icon-checkmark3"></i></a>
+                            <a href="#" class="text-grey ml-2" data-popup="tooltip" title="Settings"><i
+                                    class="icon-gear"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="header-elements mt-1">
+                    <form action="#">
+                        <div class="form-group form-group-feedback form-group-feedback-right">
+                            <input type="search" class="form-control" placeholder="Search">
+                            <div class="form-control-feedback">
+                                <i class="icon-search4 font-size-sm text-muted"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item dropdown dropdown-user">
+                <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                    <img src="../assets/global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2"
+                        height="34" alt="">
+                    <span>Victoria</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+                    <a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
+                    <a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span
+                            class="badge badge-pill bg-blue ml-auto">58</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+                    <a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Secondary navbar -->
+<div class="navbar navbar-expand-md navbar-light">
+    <div class="text-center d-md-none w-100">
+        <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+            data-target="#navbar-navigation">
+            <i class="icon-unfold mr-2"></i>
+            Navigation
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-navigation">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="navbar-nav-link active">
+                    <i class="icon-home4 mr-2"></i>
+                    {{ 'DASHBOARD' | translate }}
+                </a>
+            </li>
+
+            <li class="nav-item nav-item-levels mega-menu-full">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-make-group mr-2"></i>
+                    Navigation
+                </a>
+
+                <div class="dropdown-menu dropdown-content">
+                    <div class="dropdown-content-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="font-size-sm line-height-sm font-weight-semibold text-uppercase mt-1">Main
+                                </div>
+                                <div class="dropdown-divider mb-2"></div>
+                                <div class="dropdown-item-group mb-3 mb-md-0">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-copy"></i>
+                                                Layouts</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="../../../../layout_1/LTR/default/full/index.html"
+                                                        class="dropdown-item rounded">Default layout</a></li>
+                                                <li><a href="../../../../layout_2/LTR/default/full/index.html"
+                                                        class="dropdown-item rounded">Layout 2</a></li>
+                                                <li><a href="../../../../layout_3/LTR/default/full/index.html"
+                                                        class="dropdown-item rounded">Layout 3</a></li>
+                                                <li><a href="index.html" class="dropdown-item active rounded">Layout
+                                                        4</a></li>
+                                                <li><a href="../../../../layout_5/LTR/default/full/index.html"
+                                                        class="dropdown-item rounded">Layout 5</a></li>
+                                                <li>
+                                                    <a href="../../../../layout_6/LTR/default/full/index.html"
+                                                        class="dropdown-item disabled rounded">
+                                                        Layout 6
+                                                        <span
+                                                            class="badge bg-transparent align-self-center ml-auto">Coming
+                                                            soon</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-color-sampler"></i>
+                                                Themes</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="index.html"
+                                                        class="dropdown-item active rounded">Default</a></li>
+                                                <li><a href="../../../LTR/material/full/index.html"
+                                                        class="dropdown-item rounded">Material</a></li>
+                                                <li>
+                                                    <a href="../../../LTR/dark/full/index.html"
+                                                        class="dropdown-item disabled rounded">
+                                                        Dark
+                                                        <span
+                                                            class="badge bg-transparent align-self-center ml-auto">Coming
+                                                            soon</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../../LTR/clean/full/index.html"
+                                                        class="dropdown-item disabled rounded">
+                                                        Clean
+                                                        <span
+                                                            class="badge bg-transparent align-self-center ml-auto">Coming
+                                                            soon</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../../../RTL/default/full/index.html"
+                                                class="dropdown-item rounded">
+                                                <i class="icon-width"></i>
+                                                RTL version
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="font-size-sm line-height-sm font-weight-semibold text-uppercase mt-1">Layout
+                                </div>
+                                <div class="dropdown-divider mb-2"></div>
+                                <div class="dropdown-item-group mb-3 mb-md-0">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-stack2"></i> Page
+                                                layouts</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="layout_navbar_fixed_main.html"
+                                                        class="dropdown-item rounded">Fixed main navbar</a></li>
+                                                <li><a href="layout_navbar_sticky_secondary.html"
+                                                        class="dropdown-item rounded">Sticky secondary navbar</a></li>
+                                                <li><a href="layout_navbar_hideable_main.html"
+                                                        class="dropdown-item rounded">Hideable main navbar</a></li>
+                                                <li><a href="layout_navbar_hideable_secondary.html"
+                                                        class="dropdown-item rounded">Hideable secondary navbar</a></li>
+                                                <li><a href="layout_footer_fixed.html"
+                                                        class="dropdown-item rounded">Fixed footer</a></li>
+                                                <li><a href="layout_footer_hideable.html"
+                                                        class="dropdown-item rounded">Hideable footer</a></li>
+                                                <li><a href="layout_without_header.html"
+                                                        class="dropdown-item rounded">Without page header</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-page-break2"></i>
+                                                Headers &amp; footers</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="content_page_header.html"
+                                                        class="dropdown-item rounded">Page header</a></li>
+                                                <li>
+                                                    <a href="content_page_footer.html"
+                                                        class="dropdown-item rounded disabled">
+                                                        Page footer
+                                                        <span
+                                                            class="badge bg-transparent align-self-center ml-auto">Coming
+                                                            soon</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-cube3"></i> Boxed
+                                                layout</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="layout_boxed_default.html"
+                                                        class="dropdown-item rounded">Boxed with default sidebar</a>
+                                                </li>
+                                                <li><a href="layout_boxed_mini.html" class="dropdown-item rounded">Boxed
+                                                        with mini sidebar</a></li>
+                                                <li><a href="layout_boxed_full.html" class="dropdown-item rounded">Boxed
+                                                        full width</a></li>
+                                                <li><a href="layout_boxed_content.html"
+                                                        class="dropdown-item rounded">Boxed content</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="font-size-sm line-height-sm font-weight-semibold text-uppercase mt-1">
+                                    Navigation</div>
+                                <div class="dropdown-divider mb-2"></div>
+                                <div class="dropdown-item-group mb-3 mb-md-0">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-menu3"></i>
+                                                Navbars</a>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded">Single navbar</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="navbar_single_top_static.html"
+                                                                class="dropdown-item rounded">Single top static</a></li>
+                                                        <li><a href="navbar_single_top_fixed.html"
+                                                                class="dropdown-item rounded">Single top fixed</a></li>
+                                                        <li><a href="navbar_single_bottom_static.html"
+                                                                class="dropdown-item rounded">Single bottom static</a>
+                                                        </li>
+                                                        <li><a href="navbar_single_bottom_fixed.html"
+                                                                class="dropdown-item rounded">Single bottom fixed</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded">Multiple navbars</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="navbar_multiple_top_static.html"
+                                                                class="dropdown-item rounded">Multiple top static</a>
+                                                        </li>
+                                                        <li><a href="navbar_multiple_top_fixed.html"
+                                                                class="dropdown-item rounded">Multiple top fixed</a>
+                                                        </li>
+                                                        <li><a href="navbar_multiple_bottom_static.html"
+                                                                class="dropdown-item rounded">Multiple bottom static</a>
+                                                        </li>
+                                                        <li><a href="navbar_multiple_bottom_fixed.html"
+                                                                class="dropdown-item rounded">Multiple bottom fixed</a>
+                                                        </li>
+                                                        <li><a href="navbar_multiple_top_bottom.html"
+                                                                class="dropdown-item rounded">Multiple - top and
+                                                                bottom</a></li>
+                                                        <li><a href="navbar_multiple_secondary_sticky.html"
+                                                                class="dropdown-item rounded">Multiple - secondary
+                                                                sticky</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded">Content navbar</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="navbar_component_single.html"
+                                                                class="dropdown-item rounded">Single navbar</a></li>
+                                                        <li><a href="navbar_component_multiple.html"
+                                                                class="dropdown-item rounded">Multiple navbars</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-divider"></li>
+                                                <li><a href="navbar_colors.html" class="dropdown-item rounded">Color
+                                                        options</a></li>
+                                                <li><a href="navbar_sizes.html" class="dropdown-item rounded">Sizing
+                                                        options</a></li>
+                                                <li><a href="navbar_hideable.html" class="dropdown-item rounded">Hide on
+                                                        scroll</a></li>
+                                                <li><a href="navbar_components.html"
+                                                        class="dropdown-item rounded">Navbar components</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-transmission"></i>
+                                                Horizontal navigation</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="navigation_horizontal_click.html"
+                                                        class="dropdown-item rounded">Submenu on click</a></li>
+                                                <li><a href="navigation_horizontal_hover.html"
+                                                        class="dropdown-item rounded">Submenu on hover</a></li>
+                                                <li><a href="navigation_horizontal_elements.html"
+                                                        class="dropdown-item rounded">With custom elements</a></li>
+                                                <li><a href="navigation_horizontal_tabs.html"
+                                                        class="dropdown-item rounded">Tabbed navigation</a></li>
+                                                <li><a href="navigation_horizontal_disabled.html"
+                                                        class="dropdown-item rounded">Disabled navigation links</a></li>
+                                                <li><a href="navigation_horizontal_mega.html"
+                                                        class="dropdown-item rounded">Horizontal mega menu</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-tree5"></i> Menu
+                                                levels</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="#" class="dropdown-item rounded"><i class="icon-IE"></i>
+                                                        Second level</a></li>
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded"><i
+                                                            class="icon-firefox"></i> Second level with child</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="#" class="dropdown-item rounded"><i
+                                                                    class="icon-android"></i> Third level</a></li>
+                                                        <li>
+                                                            <a href="#" class="dropdown-item rounded"><i
+                                                                    class="icon-apple2"></i> Third level with child</a>
+                                                            <ul class="list-unstyled">
+                                                                <li><a href="#" class="dropdown-item rounded"><i
+                                                                            class="icon-html5"></i> Fourth level</a>
+                                                                </li>
+                                                                <li><a href="#" class="dropdown-item rounded"><i
+                                                                            class="icon-css3"></i> Fourth level</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#" class="dropdown-item rounded"><i
+                                                                    class="icon-windows"></i> Third level</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#" class="dropdown-item rounded"><i
+                                                            class="icon-chrome"></i> Second level</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="font-size-sm line-height-sm font-weight-semibold text-uppercase mt-1">Extras
+                                </div>
+                                <div class="dropdown-divider mb-2"></div>
+                                <div class="dropdown-item-group mb-3 mb-md-0">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i
+                                                    class="icon-indent-decrease2"></i> Sidebars</a>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded">Main sidebar</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="sidebar_default_collapse.html"
+                                                                class="dropdown-item rounded">Default collapsible</a>
+                                                        </li>
+                                                        <li><a href="sidebar_default_hide.html"
+                                                                class="dropdown-item rounded">Default hideable</a></li>
+                                                        <li><a href="sidebar_default_hidden.html"
+                                                                class="dropdown-item rounded">Default hidden</a></li>
+                                                        <li><a href="sidebar_mini_collapse.html"
+                                                                class="dropdown-item rounded">Mini collapsible</a></li>
+                                                        <li><a href="sidebar_mini_hide.html"
+                                                                class="dropdown-item rounded">Mini hideable</a></li>
+                                                        <li><a href="sidebar_mini_hidden.html"
+                                                                class="dropdown-item rounded">Mini hidden</a></li>
+                                                        <li class="dropdown-divider"></li>
+                                                        <li><a href="sidebar_default_sections.html"
+                                                                class="dropdown-item rounded">Sectioned sidebar</a></li>
+                                                        <li><a href="sidebar_default_stretched.html"
+                                                                class="dropdown-item rounded">Stretched sidebar</a></li>
+                                                        <li><a href="sidebar_default_color_dark.html"
+                                                                class="dropdown-item rounded">Dark color</a></li>
+                                                        <li><a href="sidebar_default_color_custom.html"
+                                                                class="dropdown-item rounded">Custom color</a></li>
+                                                        <li><a href="sidebar_default_color_sections_custom.html"
+                                                                class="dropdown-item rounded">Custom sections color</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded">Secondary sidebar</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="sidebar_secondary_after.html"
+                                                                class="dropdown-item rounded">After default</a></li>
+                                                        <li><a href="sidebar_secondary_before.html"
+                                                                class="dropdown-item rounded">Before default</a></li>
+                                                        <li><a href="sidebar_secondary_hidden.html"
+                                                                class="dropdown-item rounded">Hidden by default</a></li>
+                                                        <li class="dropdown-divider"></li>
+                                                        <li><a href="sidebar_secondary_sections.html"
+                                                                class="dropdown-item rounded">Sectioned sidebar</a></li>
+                                                        <li><a href="sidebar_secondary_stretched.html"
+                                                                class="dropdown-item rounded">Stretched sidebar</a></li>
+                                                        <li><a href="sidebar_secondary_color_dark.html"
+                                                                class="dropdown-item rounded">Dark color</a></li>
+                                                        <li><a href="sidebar_secondary_color_custom.html"
+                                                                class="dropdown-item rounded">Custom color</a></li>
+                                                        <li><a href="sidebar_secondary_color_sections_custom.html"
+                                                                class="dropdown-item rounded">Custom sections color</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="dropdown-item rounded">Right sidebar</a>
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="sidebar_right_default_collapse.html"
+                                                                class="dropdown-item rounded">Show - collapse main</a>
+                                                        </li>
+                                                        <li><a href="sidebar_right_default_hide.html"
+                                                                class="dropdown-item rounded">Show - hide main</a></li>
+                                                        <li><a href="sidebar_right_default_toggle.html"
+                                                                class="dropdown-item rounded">Show - fix default
+                                                                width</a></li>
+                                                        <li><a href="sidebar_right_mini_toggle.html"
+                                                                class="dropdown-item rounded">Show - fix mini width</a>
+                                                        </li>
+                                                        <li><a href="sidebar_right_secondary_hide.html"
+                                                                class="dropdown-item rounded">Show - hide secondary</a>
+                                                        </li>
+                                                        <li><a href="sidebar_right_visible.html"
+                                                                class="dropdown-item rounded">Visible by default</a>
+                                                        </li>
+                                                        <li class="dropdown-divider"></li>
+                                                        <li><a href="sidebar_right_sections.html"
+                                                                class="dropdown-item rounded">Sectioned sidebar</a></li>
+                                                        <li><a href="sidebar_right_stretched.html"
+                                                                class="dropdown-item rounded">Stretched sidebar</a></li>
+                                                        <li><a href="sidebar_right_color_dark.html"
+                                                                class="dropdown-item rounded">Dark color</a></li>
+                                                        <li><a href="sidebar_right_color_custom.html"
+                                                                class="dropdown-item rounded">Custom color</a></li>
+                                                        <li><a href="sidebar_right_color_sections_custom.html"
+                                                                class="dropdown-item rounded">Custom sections color</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-divider"></li>
+                                                <li><a href="sidebar_components.html"
+                                                        class="dropdown-item rounded">Sidebar components</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item rounded"><i class="icon-sort"></i> Vertical
+                                                navigation</a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="navigation_vertical_collapsible.html"
+                                                        class="dropdown-item rounded">Collapsible menu</a></li>
+                                                <li><a href="navigation_vertical_accordion.html"
+                                                        class="dropdown-item rounded">Accordion menu</a></li>
+                                                <li><a href="navigation_vertical_bordered.html"
+                                                        class="dropdown-item rounded">Bordered navigation</a></li>
+                                                <li><a href="navigation_vertical_right_icons.html"
+                                                        class="dropdown-item rounded">Right icons</a></li>
+                                                <li><a href="navigation_vertical_badges.html"
+                                                        class="dropdown-item rounded">Badges</a></li>
+                                                <li><a href="navigation_vertical_disabled.html"
+                                                        class="dropdown-item rounded">Disabled items</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="navigation_horizontal_mega.html"
+                                                class="dropdown-item font-weight-semibold rounded">
+                                                <i class="icon-grid52 text-indigo-400"></i>
+                                                <span class="text-indigo-400">Mega menu component</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-strategy mr-2"></i>
+                    Starter kit
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">Basic layouts</div>
+                    <div class="dropdown-submenu">
+                        <a href="#" class="dropdown-item dropdown-toggle"><i class="icon-grid2"></i> Sidebars</a>
+                        <div class="dropdown-menu">
+                            <a href="../seed/sidebar_none.html" class="dropdown-item">No sidebar</a>
+                            <a href="../seed/sidebar_main.html" class="dropdown-item">1 sidebar</a>
+                            <div class="dropdown-submenu">
+                                <a href="#" class="dropdown-item dropdown-toggle">2 sidebars</a>
+                                <div class="dropdown-menu">
+                                    <a href="../seed/sidebar_secondary.html" class="dropdown-item">Secondary sidebar</a>
+                                    <a href="../seed/sidebar_right.html" class="dropdown-item">Right sidebar</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <a href="#" class="dropdown-item dropdown-toggle">3 sidebars</a>
+                                <div class="dropdown-menu">
+                                    <a href="../seed/sidebar_right_hidden.html" class="dropdown-item">Right sidebar
+                                        hidden</a>
+                                    <a href="../seed/sidebar_right_visible.html" class="dropdown-item">Right sidebar
+                                        visible</a>
+                                </div>
+                            </div>
+                            <a href="../seed/sidebar_sections.html" class="dropdown-item">Sectioned sidebar</a>
+                            <a href="../seed/sidebar_stretched.html" class="dropdown-item">Stretched sidebar</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#" class="dropdown-item dropdown-toggle"><i class="icon-paragraph-justify3"></i>
+                            Navbars</a>
+                        <div class="dropdown-menu">
+                            <a href="../seed/navbar_main_fixed.html" class="dropdown-item">Main navbar fixed</a>
+                            <a href="../seed/navbar_main_hideable.html" class="dropdown-item">Main navbar hideable</a>
+                            <a href="../seed/navbar_secondary_sticky.html" class="dropdown-item">Secondary navbar
+                                sticky</a>
+                            <a href="../seed/navbar_both_fixed.html" class="dropdown-item">Both navbars fixed</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-header">Optional layouts</div>
+                    <a href="../seed/layout_boxed.html" class="dropdown-item"><i
+                            class="icon-align-center-horizontal"></i> Boxed layout</a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-ticket"></i>
+                    <span class=" ml-2">Tickets</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Account security</a>
+                    <a href="#" class="dropdown-item"><i class="icon-statistics"></i> Analytics</a>
+                    <a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Accessibility</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i class="icon-gear"></i> All settings</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-file-pdf"></i>
+                    <span class=" ml-2">Reports</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Account security</a>
+                    <a href="#" class="dropdown-item"><i class="icon-statistics"></i> Analytics</a>
+                    <a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Accessibility</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i class="icon-gear"></i> All settings</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-make-group mr-2"></i>
+                    Connect
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+                    <div class="dropdown-content-body p-2">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-sm-4">
+                                <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+                                    <i class="icon-github4 icon-2x"></i>
+                                    <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Github</div>
+                                </a>
+
+                                <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+                                    <i class="icon-dropbox text-blue-400 icon-2x"></i>
+                                    <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Dropbox</div>
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-sm-4">
+                                <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+                                    <i class="icon-dribbble3 text-pink-400 icon-2x"></i>
+                                    <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Dribbble</div>
+                                </a>
+
+                                <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+                                    <i class="icon-google-drive text-success-400 icon-2x"></i>
+                                    <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Drive</div>
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-sm-4">
+                                <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+                                    <i class="icon-twitter text-info-400 icon-2x"></i>
+                                    <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Twitter</div>
+                                </a>
+
+                                <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+                                    <i class="icon-youtube text-danger icon-2x"></i>
+                                    <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Youtube</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-cog3"></i>
+                    <span class="ml-2">Settings</span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Account security</a>
+                    <a href="#" class="dropdown-item"><i class="icon-statistics"></i> Analytics</a>
+                    <a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Accessibility</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i class="icon-gear"></i> All settings</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /secondary navbar -->
+
+<!-- Page header -->
+<div class="page-header">
+    <div class="page-header-content header-elements-md-inline">
+        <div class="page-title d-flex">
+            <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Dashboard</h4>
+            <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+        </div>
+    </div>
+</div>
+<!-- /page header -->
+
+
+<!-- Page content -->
+<div class="page-content pt-0">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Content area -->
+        <div class="content">
+
+            <!-- Inner container -->
+            <div class="d-flex align-items-start flex-column flex-md-row">
+
+                <!-- Right sidebar component -->
+                <div
+                    class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-left border-0 shadow-0 order-1  sidebar-expand-md">
+
+                    <!-- Sidebar content -->
+                    <div class="sidebar-content">
+
+                        <!-- Categories -->
+                        <div class="card">
+                            <div class="card-header bg-transparent header-elements-inline">
+                                <span class="font-size-sm font-weight-semibold">Filter</span>
+                                <div class="header-elements">
+
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="form-group form-group-feedback form-group-feedback-right">
+                                        <button class="btn btn-light mr-5"> <i
+                                                class="icon-undo font-size-base text-muted"></i> Clear</button>
+                                        <button class="btn btn-light"> <i
+                                                class="icon-search4 font-size-base text-muted"></i> Search</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="card-body border-0 p-0">
+                                <ul class="nav nav-sidebar mb-2">
+                                    <li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+                                        <a href="#" class="nav-link">Saves Filters</a>
+                                        <form action="#">
+                                            <div class="form-group form-group-feedback form-group-feedback-right m-3">
+                                                <input type="search" class="form-control" placeholder="Search">
+                                                <div class="form-control-feedback">
+                                                    <i class="icon-search4 font-size-base text-muted"></i>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li class="nav-item nav-item-submenu">
+                                        <a href="#" class="nav-link">Commodity</a>
+                                        <ul class="nav nav-group-sub">
+                                            <li class="nav-item"><a href="#" class="nav-link">Fleece jackets</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Gloves</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Ski jackets</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Ski pants</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Snowboard jackets</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Snowboard pants</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Technical underwear</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item nav-item-submenu">
+                                        <a href="#" class="nav-link">Salespersons</a>
+                                        <ul class="nav nav-group-sub">
+                                            <li class="nav-item"><a href="#" class="nav-link">Laces</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Sandals</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Skate shoes</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Slip ons</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Sneakers</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Winter shoes</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item nav-item-submenu">
+                                        <a href="#" class="nav-link">Deal Level</a>
+                                        <ul class="nav nav-group-sub">
+                                            <li class="nav-item"><a href="#" class="nav-link">Beanies</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Belts</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Caps</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Sunglasses</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Headphones</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Video cameras</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Wallets</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Watches</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /categories -->
+
+                    </div>
+                    <!-- /sidebar content -->
+
+                </div>
+                <!-- /right sidebar component -->
+
+                <!-- Left content -->
+                <div class="w-100 overflow-auto order-2 order-md-1">
+                    <!-- Light navbar demo -->
+                    <div class="mb-4">
+                        <div class="navbar navbar-expand-xl navbar-light bg-light navbar-component rounded">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown dropdown-user">
+                                    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+                                        data-toggle="dropdown">
+                                        <i class="icon-filter3 mr-2"></i>
+                                        <span>Toggle Filters</span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My
+                                            profile</a>
+                                        <a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
+                                        <a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i>
+                                            Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account
+                                            settings</a>
+                                        <a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="navbar-nav-link">
+                                        <i class="icon-sort mr-2"></i>
+                                        Sort By
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown dropdown-user">
+                                    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+                                        data-toggle="dropdown">
+                                        <span>Added On</span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My
+                                            profile</a>
+                                        <a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
+                                        <a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i>
+                                            Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account
+                                            settings</a>
+                                        <a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="navbar-nav-link">
+                                        <i class="icon-sort-alpha-asc mr-2"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown dropdown-user">
+
+                                    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+                                        data-toggle="dropdown">
+                                        <i class="icon-pagebreak mr-2"></i>
+                                        <span>Record(s) Per Page:</span>
+                                        <span>10</span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item">20</a>
+                                        <a href="#" class="dropdown-item">50</a>
+                                        <a href="#" class="dropdown-item">100</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a (click)="showProduct()" class="navbar-nav-link active"><i
+                                            class="icon-add mr-2"></i>
+                                        Add New</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="navbar-nav-link">
+                                        <i class="icon-meter-fast mr-2"></i>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="navbar-nav-link"><i class="icon-graph mr-2"></i>
+                                        Hedge Position</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="navbar-nav-link"><i class="icon-file-excel mr-2"></i>
+                                        Export</a>
+                                </li>
+                            </ul>
+
+                            <div class="navbar-collapse collapse flex-md-row-reverse" id="navbar-demo2-mobile">
+                                <ul class="nav navbar-nav">
+
+                                </ul>
+                                <!-- 
+                                <span class="navbar-text ml-xl-auto">
+                                    <i class="icon-user-check mr-2"></i>
+                                    Signed in as <a href="#">Victoria Baker</a>
+                                </span> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /light navbar demo -->
+                    <div *ngIf="hideAdd" class="card card-body">
+                        <form class="form-validate-jquery">
+                            <fieldset class="mb-3">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Product Name<span class="text-danger">*</span></label>
+                                            <input type="text" [(ngModel)]="productModel.name" class="form-control"
+                                                placeholder="Product Name" required name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Product Code<span class="text-danger">*</span></label>
+                                            <input type="text" [(ngModel)]="productModel.code" class="form-control"
+                                                placeholder="Product Code" required name="code">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Category<span class="text-danger">*</span></label>
+                                            <select [(ngModel)]="productModel.productCatogeryName" class="form-control"
+                                                placeholder="Category" required name="productCatogeryName">
+                                                <option value="">Choose Category</option>
+                                                <option value="Category 1">Category 1</option>
+                                                <option value="Category 2">Category 1</option>
+                                                <option value="Category 3">Category 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Sub Category<span class="text-danger">*</span></label>
+                                            <select [(ngModel)]="productModel.subCatogeryName" class="form-control"
+                                                placeholder="Sub Category" required name="subCatogeryName">
+                                                <option value="">Choose Sub Category</option>
+                                                <option value="Sub Category 1">Sub Category 1</option>
+                                                <option value="Sub Category 2">Sub Category 2</option>
+                                                <option value="Sub Category 3">Sub Category 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Brand Name<span class="text-danger">*</span></label>
+                                            <input type="text" [(ngModel)]="productModel.brandName" class="form-control"
+                                                placeholder="Brand Name" required name="brandName">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Supplier Name<span class="text-danger">*</span></label>
+                                            <input type="text" [(ngModel)]="productModel.supplierName"
+                                                class="form-control" placeholder="Supplier Code" required
+                                                name="supplierName">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>HSN<span class="text-danger">*</span></label>
+                                            <input type="text" [(ngModel)]="productModel.hsn" class="form-control"
+                                                placeholder="HSN" required name="hsn">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Unit<span class="text-danger">*</span></label>
+                                            <input type="text" [(ngModel)]="productModel.unit" class="form-control"
+                                                placeholder="Unit" required name="unit">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Buy Price<span class="text-danger">*</span></label>
+                                            <input type="number" [(ngModel)]="productModel.buyPrice"
+                                                class="form-control" placeholder="Buy Price" required name="buyPrice">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Sell Price<span class="text-danger">*</span></label>
+                                            <input type="number" [(ngModel)]="productModel.sellPrice"
+                                                class="form-control" placeholder="Sell Price" required name="sellPrice">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Event Price<span class="text-danger">*</span></label>
+                                            <input type="number" [(ngModel)]="productModel.eventPrice"
+                                                class="form-control" placeholder="Event Price" required
+                                                name="eventPrice">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>International Price<span class="text-danger">*</span></label>
+                                            <input type="number" [(ngModel)]="productModel.internationalPrice"
+                                                class="form-control" placeholder="International Price" required
+                                                name="internationalPrice">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Tax Rate<span class="text-danger">*</span></label>
+                                            <input type="number" [(ngModel)]="productModel.taxRate" class="form-control"
+                                                placeholder="Tax Rate" required name="taxRate">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Weight<span class="text-danger">*</span></label>
+                                            <input type="number" [(ngModel)]="productModel.weight" class="form-control"
+                                                placeholder="Weight" required name="weight">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Qunatity<span class="text-danger">*</span></label>
+                                            <select [(ngModel)]="productModel.notifyQunatity" class="form-control"
+                                                placeholder="Qunatity" required name="notifyQunatity">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Image<span class="text-danger">*</span></label>
+                                            <input type="file" (change)="fileChangeEvent($event)"
+                                                [(ngModel)]="productModel.image" name="styled_file" style="    opacity: 1 !important;" required data-fouc>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Note<span class="text-danger">*</span></label>
+                                            <textarea rows="5" cols="5" [(ngModel)]="productModel.note"
+                                                class="form-control" placeholder="Note" required name="note"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                            <div class="d-flex justify-content-end align-items-center">
+                                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                <button type="submit" (click)="addProduct()" class="btn btn-primary ml-3">Submit <i
+                                        class="icon-paperplane ml-2"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Basic datatable -->
+                    <div class="table-responsive card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>#</th>
+                                    <th>Company#</th>
+                                    <th>HSN</th>
+                                    <th>Name</th>
+                                    <th>Code</th>
+                                    <th>Brand</th>
+                                    <th>Supplier</th>
+                                    <th>Category</th>
+                                    <th>Sub Category</th>
+                                    <th>Qty.</th>
+                                    <th>Buy Price</th>
+                                    <th>Sell Price</th>
+                                    <th>Event Price</th>
+                                    <th>International Price</th>
+                                    <th>Tax</th>
+                                    <th>Weight</th>
+                                    <th>Unit</th>
+                                    <th>Active</th>
+                                    <th>Deleted</th>
+                                    <th>Created</th>
+                                    <th>Updated</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of productData">
+                                    <td>
+                                        <img src="{{product.images}}" height="50" width="60"
+                                            onerror="src='../../assets/download.jfif'">
+                                    </td>
+                                    <td>{{product.id}}</td>
+                                    <td>{{product.companyId}}</td>
+                                    <td>{{product.hsn}}</td>
+                                    <td>{{product.productName}}</td>
+                                    <td>{{product.productCode}}</td>
+                                    <td>{{product.brandName}}</td>
+                                    <td>{{product.supplierName}}</td>
+                                    <td>{{product.productCatogeryName}}</td>
+                                    <td>{{product.subCatogeryName}}</td>
+                                    <td>{{product.notifyQunatity}}</td>
+                                    <td>{{product.buyPrice}}</td>
+                                    <td>{{product.sellPrice}}</td>
+                                    <td>{{product.eventPrice}}</td>
+                                    <td>{{product.internationalPrice}}</td>
+                                    <td>{{product.taxRate}}</td>
+                                    <td>{{product.weight}}</td>
+                                    <td>{{product.unit}}</td>
+                                    <td>{{product.active}}</td>
+                                    <td>{{product.deleted}}</td>
+                                    <td>{{product.createdAt | date}}</td>
+                                    <td>{{product.updatedAt | date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /basic datatable -->
+
+                </div>
+                <!-- /left content -->
+
+
+
+            </div>
+            <!-- /inner container -->
+
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+
+</div>
+<!-- /page content -->
+
+
+<!-- Footer -->
+<div class="navbar navbar-expand-lg navbar-light">
+    <div class="text-center d-lg-none w-100">
+        <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+            data-target="#navbar-footer">
+            <i class="icon-unfold mr-2"></i>
+            Footer
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-footer">
+        <span class="navbar-text">
+            &copy; 2015 - 2018. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov"
+                target="_blank">Eugene Kopyov</a>
+        </span>
+
+        <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link" target="_blank"><i
+                        class="icon-lifebuoy mr-2"></i> Support</a></li>
+            <li class="nav-item"><a href="http://demo.interface.club/limitless/docs/" class="navbar-nav-link"
+                    target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a></li>
+            <li class="nav-item"><a
+                    href="https://themeforest.net/item/limitless-responsive-web-application-kit/13080328?ref=kopyov"
+                    class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i
+                            class="icon-cart2 mr-2"></i>
+                        Purchase</span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- /footer -->
+
+<!-- Basic modal -->
+<div id="modal_default" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Product</h5>
+                <button type="button" #closeModel class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form class="form-validate-jquery">
+                    <fieldset class="mb-3">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Product Name<span class="text-danger">*</span></label>
+                                    <input type="text" [(ngModel)]="productModel.name" class="form-control"
+                                        placeholder="Product Name" required name="name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Product Code<span class="text-danger">*</span></label>
+                                    <input type="text" [(ngModel)]="productModel.code" class="form-control"
+                                        placeholder="Product Code" required name="code">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Category<span class="text-danger">*</span></label>
+                                    <select [(ngModel)]="productModel.productCatogeryName" class="form-control"
+                                        placeholder="Category" required name="productCatogeryName">
+                                        <option value="">Choose Category</option>
+                                        <option value="Category 1">Category 1</option>
+                                        <option value="Category 2">Category 1</option>
+                                        <option value="Category 3">Category 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Sub Category<span class="text-danger">*</span></label>
+                                    <select [(ngModel)]="productModel.subCatogeryName" class="form-control"
+                                        placeholder="Sub Category" required name="subCatogeryName">
+                                        <option value="">Choose Sub Category</option>
+                                        <option value="Sub Category 1">Sub Category 1</option>
+                                        <option value="Sub Category 2">Sub Category 2</option>
+                                        <option value="Sub Category 3">Sub Category 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Brand Name<span class="text-danger">*</span></label>
+                                    <input type="text" [(ngModel)]="productModel.brandName" class="form-control"
+                                        placeholder="Brand Name" required name="brandName">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Supplier Name<span class="text-danger">*</span></label>
+                                    <input type="text" [(ngModel)]="productModel.supplierName" class="form-control"
+                                        placeholder="Supplier Code" required name="supplierName">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>HSN<span class="text-danger">*</span></label>
+                                    <input type="text" [(ngModel)]="productModel.hsn" class="form-control"
+                                        placeholder="HSN" required name="hsn">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Unit<span class="text-danger">*</span></label>
+                                    <input type="text" [(ngModel)]="productModel.unit" class="form-control"
+                                        placeholder="Unit" required name="unit">
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Buy Price<span class="text-danger">*</span></label>
+                                    <input type="number" [(ngModel)]="productModel.buyPrice" class="form-control"
+                                        placeholder="Buy Price" required name="buyPrice">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Sell Price<span class="text-danger">*</span></label>
+                                    <input type="number" [(ngModel)]="productModel.sellPrice" class="form-control"
+                                        placeholder="Sell Price" required name="sellPrice">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Event Price<span class="text-danger">*</span></label>
+                                    <input type="number" [(ngModel)]="productModel.eventPrice" class="form-control"
+                                        placeholder="Event Price" required name="eventPrice">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>International Price<span class="text-danger">*</span></label>
+                                    <input type="number" [(ngModel)]="productModel.internationalPrice"
+                                        class="form-control" placeholder="International Price" required
+                                        name="internationalPrice">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Tax Rate<span class="text-danger">*</span></label>
+                                    <input type="number" [(ngModel)]="productModel.taxRate" class="form-control"
+                                        placeholder="Tax Rate" required name="taxRate">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Weight<span class="text-danger">*</span></label>
+                                    <input type="number" [(ngModel)]="productModel.weight" class="form-control"
+                                        placeholder="Weight" required name="weight">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Qunatity<span class="text-danger">*</span></label>
+                                    <select [(ngModel)]="productModel.notifyQunatity" class="form-control"
+                                        placeholder="Qunatity" required name="notifyQunatity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Image<span class="text-danger">*</span></label>
+                                    <input type="file" (change)="fileChangeEvent($event)"
+                                        [(ngModel)]="productModel.image" name="styled_file" class="form-input-styled"
+                                        required data-fouc>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Note<span class="text-danger">*</span></label>
+                                    <textarea rows="5" cols="5" [(ngModel)]="productModel.note" class="form-control"
+                                        placeholder="Note" required name="note"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="d-flex justify-content-end align-items-center">
+                        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                        <button type="submit" (click)="addProduct()" class="btn btn-primary ml-3">Submit <i
+                                class="icon-paperplane ml-2"></i></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /basic modal -->
