@@ -16,6 +16,8 @@ export class HomeComponent {
   @ViewChild('closeModel') closeModel: any;
   selectedLang = 'en';
   hideAdd: boolean = false;
+  isLeftPanel: boolean = false;
+  defaultDateFormat = 'MM/dd/yyyy';
 
   productModel = {
     name: "", code: "", taxRate: null, weight: null, brandName: "", supplierName: "", productCatogeryName: "",
@@ -28,7 +30,8 @@ export class HomeComponent {
 
   changeLanguage(lang: string) {
     this.selectedLang = lang;
-    this.translate.use(lang).subscribe(res => { });
+    this.translate.use(lang).subscribe(res => {
+    });
   }
 
   ngOnInit() {

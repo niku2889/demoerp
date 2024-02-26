@@ -882,7 +882,7 @@
             <div class="d-flex align-items-start flex-column flex-md-row">
 
                 <!-- Right sidebar component -->
-                <div
+                <div *ngIf="isLeftPanel"
                     class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-left border-0 shadow-0 order-1  sidebar-expand-md">
 
                     <!-- Sidebar content -->
@@ -975,14 +975,14 @@
                     <div class="mb-4">
                         <div class="navbar navbar-expand-xl navbar-light bg-light navbar-component rounded">
                             <ul class="navbar-nav">
-                                <li class="nav-item dropdown dropdown-user">
-                                    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
-                                        data-toggle="dropdown">
+                                <li class="nav-item ">
+                                    <a class="navbar-nav-link d-flex align-items-center "
+                                        (click)="isLeftPanel = !isLeftPanel">
                                         <i class="icon-filter3 mr-2"></i>
                                         <span>Toggle Filters</span>
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-right">
+                                    <!-- <div class="dropdown-menu dropdown-menu-right">
                                         <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My
                                             profile</a>
                                         <a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
@@ -992,7 +992,7 @@
                                         <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account
                                             settings</a>
                                         <a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
-                                    </div>
+                                    </div> -->
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="navbar-nav-link">
@@ -1209,7 +1209,8 @@
                                         <div class="form-group">
                                             <label>Image<span class="text-danger">*</span></label>
                                             <input type="file" (change)="fileChangeEvent($event)"
-                                                [(ngModel)]="productModel.image" name="styled_file" style="    opacity: 1 !important;" required data-fouc>
+                                                [(ngModel)]="productModel.image" name="styled_file"
+                                                style="    opacity: 1 !important;" required data-fouc>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -1224,7 +1225,7 @@
                             </fieldset>
 
                             <div class="d-flex justify-content-end align-items-center">
-                                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-link" (click)="hideAdd = false">Close</button>
                                 <button type="submit" (click)="addProduct()" class="btn btn-primary ml-3">Submit <i
                                         class="icon-paperplane ml-2"></i></button>
                             </div>
@@ -1285,8 +1286,8 @@
                                     <td>{{product.unit}}</td>
                                     <td>{{product.active}}</td>
                                     <td>{{product.deleted}}</td>
-                                    <td>{{product.createdAt | date}}</td>
-                                    <td>{{product.updatedAt | date}}</td>
+                                    <td>{{product.createdAt | date: 'MM/dd/yyyy' }}</td>
+                                    <td>{{product.updatedAt | date: 'dd/MM/yyyy' }}</td>
                                 </tr>
                             </tbody>
                         </table>
